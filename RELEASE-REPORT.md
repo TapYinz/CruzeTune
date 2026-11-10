@@ -1,6 +1,6 @@
 # Release candidate verification
 
-Prepared 2026-11-10 UTC. This report records the source-only release candidate, not a completed remote publication or vehicle validation. Publication status: local candidate; remote upload pending.
+Prepared 2026-11-10 UTC. Published privately to https://github.com/TapYinz/E78-Tuning on 2026-11-10 UTC. GitHub confirmed PRIVATE visibility; the initial remote commit and all53 uploaded file blobs matched the reviewed local release. This report records package verification, not vehicle validation.
 
 ## Environment and actual checks
 
@@ -20,4 +20,4 @@ Release validation checks an explicit allowlist, all shipped text sizes/hashes, 
 
 No original/candidate/donor firmware, raw capture, security exchange, private identity, hardware serial or Ghidra project is included. Original images remain private and untouched. Public source hashes identify privately retained research summaries; they do not provide public access to raw evidence.
 
-No physical flash write, interrupted-write recovery, loaded tune, measured output gain, crackle calibration or whole-firmware simulation is validated. All research candidates remain flash_ready=false. The GitHub/GitLab upload must be separately verified before this release is described as published.
+No physical flash write, interrupted-write recovery, loaded tune, measured output gain, crackle calibration or whole-firmware simulation is validated. All research candidates remain flash_ready=false. The initial GitHub upload was verified against the complete manifest allowlist; no parent collection files were uploaded.
