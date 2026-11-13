@@ -61,3 +61,11 @@ integration verification, supply your exact baseline through
 `E78_PRIVATE_BASELINE` and run the same test command. Tests use temporary files
 that are cleaned afterward. Synthetic examples demonstrate algorithms and
 unknown-image rejection, not ECU simulation or tuning validation.
+
+## Flashy integration additions
+
+The [package README](../README.md) documents the matched A/B/C builder,
+108-record research exporter, injected original-read workflow and pure identity
+decoder. These extend the historical six-module minimum described above.
+The read workflow has no adapter/backend launcher. Its optional tests require
+`E78_KERNEL_IMAGE` and `lz4`; missing inputs are explicit skips.

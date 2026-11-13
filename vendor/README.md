@@ -21,3 +21,7 @@ recorded in `provenance.json`. Only `e78_candidate.py` changes those defaults:
 the private baseline defaults to `private/original.bin`, can be selected with
 `E78_PRIVATE_BASELINE`, and signatures are resolved in `vendor/`.
 All image identity, region, metadata and checksum guards remain unchanged.
+
+## Portable toolkit update
+
+[Integration provenance](integration-provenance.json) records portable read-state-machine and A/B/C builder adaptations, the metadata-only catalog, and formatting. The stock-loader protocol lineage retains the [ESP32-ECU-Flasher GPL notice](ESP32-ECU-Flasher-LICENSE). No kernel binary is bundled.

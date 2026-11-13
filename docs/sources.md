@@ -1,6 +1,6 @@
 # Sources and provenance
 
-This release is authored from retained local research dated2026-11-09/10 UTC. The [evidence ledger](evidence-ledger.json) pins the summarized private document versions. Private provenance labels are not publicly downloadable artifacts. Public code provenance is in [vendor/provenance.json](../vendor/provenance.json); release-manifest.json pins the shipped files.
+This release is authored from retained local research dated2026-11-09 through2026-11-12 UTC. The [evidence ledger](evidence-ledger.json) pins the summarized private document versions. Private provenance labels are not publicly downloadable artifacts. Public code provenance is in [vendor/provenance.json](../vendor/provenance.json); release-manifest.json pins the shipped files.
 
 | Source | Pinned reference | Role |
 | --- | --- | --- |
@@ -14,4 +14,4 @@ This release is authored from retained local research dated2026-11-09/10 UTC. Th
 
 SavvyCAN, Flashy, EFIGenieE78 and GM-ECU-Simulator were assessed as distinct capabilities, not prerequisites for this minimal kit. Their source/licensing belongs to their upstream projects; no third-party checkout is republished here. Physical CAN FD, alternate adapters, generic A2L/XDF compatibility and complete firmware simulation were not established.
 
-The bundled tool sources originated in the private research workspace; the public port changes path handling and optional exporter provenance, not the exact-image acceptance criteria. GPL-3.0-or-later applies to this combined distribution. Preserve original notices and source attribution; no claim of ownership over OEM firmware is made, and no such firmware is supplied.
+The bundled tool sources originated in the private research workspace; the public port preserves exact-image acceptance criteria. See [integration provenance](../vendor/integration-provenance.json) for the added decoder, metadata reconstruction, A/B/C port and formatting. GPL-3.0-or-later applies to this combined distribution. Preserve original notices and source attribution; no claim of ownership over OEM firmware is made, and no such firmware is supplied.

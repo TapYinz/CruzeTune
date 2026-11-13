@@ -1,11 +1,32 @@
-# Optional acquisition and analysis inventory
+# Included and excluded acquisition/research components
 
-The minimal kit assumes you already have an appropriate private original. A public end-to-end reader tier is a planned separate deliverable, not hidden in the six-module closure.
+This release includes the injected original-read state machine, packet decoder
+and pure identity decoder. Synthetic transport tests exercise those components;
+they supply no serial/CAN backend or live launcher. See
+[protocol boundaries](docs/protocols.md).
 
-The originating verified stock acquisition implementation uses `rh02_read_original.py`, `e78_read_workflow.py`, `e78_read_protocol.py`, `rh02_kernel_transport.py`, `rh02_identify.py` and `rh02_passive.py`. It needs POSIX serial support, can-isotp and lz4, an identity record, fixed pinned kernel, exact compatible firmware/adapter, a bounded session and restoration plan. Its direct serial transport uses termios/fcntl rather than pyserial. The originating environment additionally had python-can4.6.1, can-isotp2.0.7, pyserial3.5 and lz44.4.5; that environment lock is not the minimum direct-reader dependency list. These private reader sources are not bundled or offered as publicly downloadable paths.
+The standalone calibration workflow assumes a caller-owned exact matching
+original. An end-to-end reader/logger is a separate planned deliverable.
 
-Runtime tools include fixed diagnostic/RAM capture and analyzers. Their imports/provenance rely on private reference exports and saved trace/capture files; copying a lone helper would create a broken or unsafe distribution. A future reader/logging release must remove owner-specific defaults, require explicit adapter/identity inputs, retain fixed allowlists and fresh traffic gates, preserve stock/kernel dialect boundaries and pass offline PTY/negative tests before any separately authorized target validation.
+The originating verified acquisition also uses private RH02 transport, identity
+and launch helpers. Its direct serial route depends on Linux POSIX support,
+can-isotp and LZ4, plus explicit identity/kernel inputs and a bounded session
+with a restoration plan. It uses termios/fcntl rather than pyserial. Other
+environment packages are not automatically dependencies of every workflow.
 
-Optional reverse engineering uses Ghidra12.1.4_DEV in the recorded case, bounded noanalysis traces and an SPE-capable PowerPC decoding model. The language choice is not a verified MCU identity. E78Trace.java and E78SparkLookupEmulate.java are existing research helpers; they are not included in this minimal release. The optional exact-image definition exporter here does not require a Ghidra database because it exports already established definitions and records their provenance, rather than re-running disassembly.
+Private runtime tools and analyzers often depend on saved trace/capture exports.
+A portable release needs explicit input/device selection, retained request
+allowlists and traffic checks, and its own transport/negative tests. Copying a
+single host-bound script does not supply that integration.
 
-SavvyCAN/can-utils may assist capture work; GM-ECU-Simulator is protocol simulation; EFIGenieE78 is a custom firmware/bootloader-patch project. None substitutes for a validated stock calibration writer. No unsupported live command or recovery recipe is supplied to fill that gap.
+Ghidra scripts, restricted eTPU interpreters, loader/peripheral models and their
+private projects remain research components. Their current scope is summarized
+in [research progress](docs/research-progress.md); the source kit does not ship
+every harness or claim a complete ECU simulator. Definition exporters consume
+already established metadata and a matching private image, without needing
+Ghidra installed or re-running the original instruction traces.
+
+Firmware dumps, candidate binaries, kernel assets, donor images, stock cell
+arrays, VIN/identity/security records, raw captures and Ghidra databases are
+excluded. Source provenance does not grant access to those private inputs.
+No live flashing, physical recovery or validated performance tune is supplied.

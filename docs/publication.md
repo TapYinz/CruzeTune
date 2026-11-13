@@ -1,6 +1,6 @@
 # Publication and maintenance plan
 
-## Release0.1 scope
+## Initial release scope
 
 Publish the smallest self-contained offline toolkit and an authored handbook. Include synthetic examples, private-input tests that transparently skip without the exact baseline, scoped AGENTS.md files, exact upstream provenance and a checked release manifest. Do not publish the originating collection, its full history, compiled verbatim documentation, or any vehicle data.
 
@@ -29,3 +29,15 @@ Milestones are proposals, not completed validations. Do not use this vehicle for
 ## Agent collaboration
 
 Root AGENTS.md defines evidence/privacy/operation boundaries and standing offline delegation. docs/AGENTS.md owns public evidence; tools/AGENTS.md owns guards and offline verification; definitions/AGENTS.md owns software applicability; examples/AGENTS.md owns synthetic and worked-example integrity. One coordinator integrates/reviews and publishes. A separate conversation or project task is not automatically a child agent; shared files still require coordinated ownership.
+
+## Current standalone release
+
+The repository root contains the explicit release manifest and CI workflow.
+The current release adds the108-record metadata catalog, matched A/B/C builder,
+injected read workflow and expanded tests. [Protocol boundaries](protocols.md),
+[research progress](research-progress.md) and the [app roadmap](platform-roadmap.md)
+separate delivered code from future hardware and interface work.
+
+The owner explicitly requested public visibility for this repository. Before
+changing it, review all reachable Git history and hosted releases/artifacts as
+well as the current source tree; prior private visibility is not a privacy audit.

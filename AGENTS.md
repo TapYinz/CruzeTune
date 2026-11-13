@@ -1,4 +1,4 @@
-# E78 Tuning agent instructions
+# CruzeTune agent instructions
 
 ## Scope and evidence
 

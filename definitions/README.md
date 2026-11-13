@@ -30,3 +30,14 @@ Torque rows use percentage axis[0,20,60,80]; a ROM-selected branch normally writ
 ## Later non-editable research
 
 The minimum-spark main structure header07895A/data07895E is33rows×17columns, signed16BE, numerical factor1/128. Fallback and downstream clamp sites are traced, but final overrun spark selection is unresolved. DFCO delay structures have own-code state selectors2/3, with scheduler/time units and complete fuel-cut chain still unresolved. See ../docs/discoveries.md for detailed scope and rejected pattern matches. Neither set is an editable crackle definition.
+
+## Current metadata extension
+
+[research-catalog.json](research-catalog.json) now records108 entries, including
+axes/scalars/models and two recent base-spark plus two VCP spark contributions.
+It contains no original cell arrays. The new exporter reconstructs15,893 logical
+cells from the private matching baseline, preserving non-editable status.
+[Current interpretation and limits](../docs/research-progress.md) supersede the
+older final-spark/DFCO knowledge boundaries above; full vehicle validation remains
+open. The VCP rate axis uses inline endpoints and only shares display knots with
+the existing stored rate axis.

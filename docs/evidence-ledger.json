@@ -3,7 +3,9 @@
   "title": "E78 research evidence ledger",
   "recorded_evidence_dates_utc": [
     "2026-11-09",
-    "2026-11-10"
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12"
   ],
   "description": "Public-safe authored summaries refer to private source documents. Paths are provenance labels relative to the originating collection, not public download locations. Source hashes identify document versions; unpublished evidence cannot be independently verified from this ledger alone. Historical source statements are superseded where later records are explicitly cited.",
   "analyzed_image": {
@@ -53,7 +55,7 @@
     {
       "name": "GM-ECU-Simulator",
       "revision": "5436835a4475a979a95680e5030f17acdd7f2069",
-      "execution_status": "source_inspected_not_run"
+      "execution_status": "Initially source-inspected only; later headless protocol/importer tests recorded in D25, not full stock firmware simulation."
     }
   ],
   "flash_ready": false,
@@ -505,6 +507,109 @@
           "private_collection_path": "cruze-e78-research/docs/spark-control-20261110.md",
           "sha256": "39d0a081318967f58efe70dc64f49645187e171e872c7126b762467f03775db5",
           "publicly_bundled": false
+        }
+      ]
+    },
+    {
+      "id": "D22",
+      "title": "Base spark exact-image lookup/blend definitions",
+      "evidence_classes": [
+        "source_inspection",
+        "offline_test"
+      ],
+      "status": "qualified_research",
+      "scope": "exact-image unless separately protocol-only",
+      "boundary": "3831 isolated original-instruction cases; physical calibration/loaded response remain unvalidated.",
+      "sources": [
+        {
+          "private_collection_path": "cruze-e78-research/docs/base-spark-definition-20261112.md",
+          "sha256": "dfa4d8dc56db20d896202ebdc4fc6e54c5cef5715dfee24bcbfce5d1525f0c16",
+          "publicly_bundled": false
+        }
+      ]
+    },
+    {
+      "id": "D23",
+      "title": "VCP spark contribution and catalog108",
+      "evidence_classes": [
+        "source_inspection",
+        "offline_test"
+      ],
+      "status": "qualified_research",
+      "scope": "exact-image unless separately protocol-only",
+      "boundary": "3719 isolated original-instruction cases plus18 arithmetic checks; desired cam targets remain unresolved.",
+      "sources": [
+        {
+          "private_collection_path": "cruze-e78-research/docs/vvt-spark-dependencies-20261112.md",
+          "sha256": "bac0967fa06057f0f652676ba3c12803d48abcdb83cb73733a5240f93cbe9662",
+          "publicly_bundled": false
+        }
+      ]
+    },
+    {
+      "id": "D24",
+      "title": "Matched A/B/C experimental pedal draft",
+      "evidence_classes": [
+        "source_inspection",
+        "offline_test"
+      ],
+      "status": "qualified_research",
+      "scope": "exact-image unless separately protocol-only",
+      "boundary": "378 cells/1030 bytes; source candidate is not a validated92-AKI tune; portable reproduction tested separately.",
+      "sources": [
+        {
+          "private_collection_path": "cruze-e78-research/docs/tune-draft-20261112.md",
+          "sha256": "776fc68686c7a861683d7a10eaea487a6485d18719c7c913c4cc85563cf175a7",
+          "publicly_bundled": false
+        }
+      ]
+    },
+    {
+      "id": "D25",
+      "title": "Protocol simulation and modeled programming/return",
+      "evidence_classes": [
+        "source_inspection",
+        "offline_test"
+      ],
+      "status": "qualified_research",
+      "scope": "exact-image unless separately protocol-only",
+      "boundary": "Headless protocol tests and separately modeled loader/stock fragments; no full ECU simulation or physical write/recovery proof.",
+      "sources": [
+        {
+          "private_collection_path": "cruze-e78-research/docs/bcm-access-selection-20261111.md",
+          "sha256": "3a854387f653ab00a5ffb932cf0165f5ac5ad6c940fdd72603f9f1f61a950cd0",
+          "publicly_bundled": false
+        },
+        {
+          "private_collection_path": "cruze-e78-research/docs/recovery-host-inventory-20261112.md",
+          "sha256": "3ac9906ff678c5217979131edf3f0efb6808ba8985423f9d50fadaa27d4ca49c",
+          "publicly_bundled": false
+        },
+        {
+          "private_collection_path": "cruze-e78-research/docs/recovery-stock-return-20261112.md",
+          "sha256": "08faf7907ce2c42f3fb962d107160fd62cced24e4a28fc19b59318d457399e80",
+          "publicly_bundled": false
+        }
+      ]
+    },
+    {
+      "id": "D26",
+      "title": "GM simulator contribution and Windows wizard regression",
+      "evidence_classes": [
+        "compiled_synthetic_tests"
+      ],
+      "status": "upstream_pr_open",
+      "scope": "protocol importer and view models, no full ECU or interactive GUI simulation",
+      "sources": [
+        {
+          "url": "https://github.com/hjtrbo/GM-ECU-Simulator/pull/4",
+          "commit": "83b5ad2fd2573e6ad08a3c5359fb47a15d907572"
+        },
+        {
+          "url": "https://github.com/TapYinz/GM-ECU-Simulator/actions/runs/43342030611",
+          "core_cases": 27,
+          "wizard_cases": 6,
+          "failures": 0
         }
       ]
     }
